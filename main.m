@@ -1,4 +1,4 @@
-fileName = "d.txt";
+fileName = "f.txt";
 
 [D, numIntersections, streets, carPaths, points] = hashcodeRead(fileName);
 
@@ -6,6 +6,6 @@ fileName = "d.txt";
 
 outData = findSingleIntersections(streets, numIntersections);
 
-fileOut = "d_out.txt";
+fileOut = "f_out.txt";
 
 outputData(fileOut, outData);
