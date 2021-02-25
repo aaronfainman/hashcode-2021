@@ -12,13 +12,17 @@ numStreets = firstLineData{3};
 numCars = firstLineData{4};
 points = firstLineData{5};
 
-streets = {};
+streets = cell(numStreets, 4);
 
 for (i = 1:numStreets)
     line = fgetl(file);
     street = textscan(line, '%d%d%s%d');
-    streetName = street{3};
-    streets{i,1} = {street{1}, street{2}, streetName{1}, street{4}};
+    tempCell = cell(1,4);
+    
+    streets{i,1} = street{1};
+    streets{i,2} = street{2};
+    streets{i,3} = string(street{3}{1});
+    streets{i,4} = street{4};
 end
 
 carPaths = {};
