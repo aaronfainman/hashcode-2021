@@ -32,5 +32,6 @@ for (i = 1:numCars)
      carPaths{i,1} = streetList(2:end);
 end
 
+fclose(file);
 end
 
